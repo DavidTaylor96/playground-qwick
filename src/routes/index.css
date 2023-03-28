@@ -2,19 +2,23 @@
   position: fixed;
   bottom: 20px;
   left: 0;
-  width: 200px;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   pointer-events: none;
-  background-color: red;
+  background-color: transparent;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .scroll-indicator-bar {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 2px;
+  height: 30px;
+  border-radius: 8px;
   background-color: #fff;
+  margin-top: 5px;
   opacity: 0.5;
+}
+
+.scroll-indicator-bar.active {
+  opacity: 1;
 }

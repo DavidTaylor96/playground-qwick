@@ -4,6 +4,7 @@ import About from '~/components/sections/about/about';
 import Skills from '~/components/sections/skills/skills';
 import Work from '~/components/sections/work/work';
 import './index.css';
+
 export interface IRoutes {
   route: string;
 }
@@ -36,10 +37,30 @@ export default component$(() => {
       bottom: 300,
     },
   ]);
+  useOnDocument(
+    'scroll',
+    $(() => {
+      const scrollPosition = window.scrollY;
+      const about = document.getElementById('about')!.getBoundingClientRect();
+      const work = document.getElementById('work')!.getBoundingClientRect();
+      const skills = document.getElementById('skills')!.getBoundingClientRect();
+
+      if (scrollPosition >= about.top && scrollPosition <= about.bottom) {
+        router.route = 'about';
+      }
+      if (scrollPosition >= work.top && scrollPosition <= work.bottom) {
+        router.route = 'work';
+      }
+      if (scrollPosition >= skills.top && scrollPosition <= skills.bottom) {
+        router.route = 'skills';
+      }
+    }),
+  );
 
   useOn(
     'click',
     $((event) => {
+      console.log('---------------- router.route', router.route);
       if (router.route === 'about') {
         event.preventDefault();
         document.getElementById('about')!.scrollIntoView({ behavior: 'smooth' });
@@ -52,39 +73,19 @@ export default component$(() => {
         event.preventDefault();
         document.getElementById('skills')!.scrollIntoView({ behavior: 'smooth' });
       }
-    })
-  );
-
-  useOnDocument(
-    'scroll',
-    $(() => {
-      const scrollPosition = window.scrollY;
-      sections.forEach((section) => {
-        if (scrollPosition >= section.top && scrollPosition <= section.bottom) {
-          console.log(section.id);
-        }
-      });
-      const about = document.getElementById('about')!.getBoundingClientRect();
-      const work = document.getElementById('work')!.getBoundingClientRect();
-      const skills = document.getElementById('skills')!.getBoundingClientRect();
-
-      if (scrollPosition >= about.top && scrollPosition <= about.bottom) {
-		console.log('about')
-        router.route = 'about';
-      }
-      if (scrollPosition >= work.top && scrollPosition <= work.bottom) {
-		console.log('work')
-        router.route = 'work';
-      }
-      if (scrollPosition >= skills.top && scrollPosition <= skills.bottom) {
-		console.log('skills')
-        router.route = 'skills';
-      }
-    })
-  );
+    }));
 
   return (
     <>
+      <div class="scroll-indicator">
+        {/* TODO: repeat for the about of seciton that we have */}
+        {sections.map((section) => (
+          <div
+            key={section.id}
+            class={`scroll-indicator-bar ${section.id === router.route ? 'active' : ''}`}
+          ></div>
+        ))}
+      </div>
       <header>
         <NavBar selectedSection={router} />
       </header>

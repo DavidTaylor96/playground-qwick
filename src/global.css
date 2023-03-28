@@ -1,77 +1,86 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-	font-family: 'Poppins';
-	margin: 0px;
-	padding: 0px;
+  font-family: 'Poppins';
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Poppins';
+/* For WebKit */
+::-webkit-scrollbar {
+  display: none;
 }
 
-p{
-	font-size: 1rem;
-	font-weight: 300;
-}
-h1{
-	font-size: 2.5rem;
-	font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins';
 }
 
-h2{
-	font-size: 1.5rem;
-	font-weight: 400;
-	text-transform: uppercase;
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .container {
-	flex-basis: 50%;
-	max-height: 100vh;
-	overflow-y: scroll;
-	scroll-snap-type: y mandatory;
+  flex-basis: 50%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .inner-container {
-	border-bottom: 0.5px solid white;
-	display: flex;
-	height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .right-inner-container {
-	display: flex;
-	flex-direction: column;
-	max-width: 800px;
-	margin-left: 50px;
-	margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-
-.right-panel-header{
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+.right-panel-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.panel-right{
-	display: flex;
-	flex: 0.7;
-	flex-direction: column;
-	color: #fff;
-	background-color: #000;
-	scroll-snap-align: start;
-	padding-top: 30vh;
-
+.panel-right {
+  display: flex;
+  flex: 0.7;
+  flex-direction: column;
+  color: #fff;
+  background-color: #000;
+  scroll-snap-align: start;
+  padding-top: 30vh;
 }
 
-.panel-left{
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	background-color: #fff;
-	scroll-snap-align: start;
+.panel-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #fff;
+  scroll-snap-align: start;
 }
