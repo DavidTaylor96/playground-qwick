@@ -11,24 +11,27 @@
     top: 0;
     left: 0;
     right: 0;
+    padding: 0 20px;
     z-index: 1;
 
 }
-
+.spacer{
+    flex: 1;
+}
 ul{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0;
-    list-style-type: none 
+    list-style-type: none;
 }
-
 
 .nav-bar li{
     margin: 0 15px;
+}
+
+.nav-bar ul li.active-route {
+  border-bottom: 1px solid white;
+  transition: border-bottom 0.3s ease-in;
 }
 
 li p {

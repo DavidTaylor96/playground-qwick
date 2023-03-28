@@ -1,8 +1,12 @@
 import { component$ } from '@builder.io/qwik';
 
-export default component$(() => {
+interface ISkills {
+	id: string;
+}
+
+export default component$((props: ISkills) => {
 	return (
-		<div class="inner-container">
+		<div class="inner-container" id={props.id}>
 		<div class="panel-right">
 		<article class="right-inner-container">
 		<h1 class='right-panel-header'>Skills</h1>

@@ -2,10 +2,13 @@ import { component$ } from '@builder.io/qwik';
 import AboutImage from '../../../assets/images/profile.jpg';
 import './about.css';
 
+interface IAbout {
+	id: string;
+}
 
-export default component$(() => {
+export default component$((props: IAbout) => {
 	return (
-		<div class="inner-container">
+		<div class="inner-container" id={props.id}>
 			<div class="panel-right">
 				<article class="right-inner-container">
 				<h1 class='right-panel-header'>About</h1>

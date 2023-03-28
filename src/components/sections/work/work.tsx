@@ -1,8 +1,13 @@
 import { component$ } from '@builder.io/qwik';
 
-export default component$(() => {
+
+interface IWork {
+	id: string;
+}
+
+export default component$((props: IWork) => {
 	return (
-		<div class="inner-container">
+		<div class="inner-container" id={props.id}>
 		<div class="panel-right">
 		<article class="right-inner-container">
 		<h1 class='right-panel-header'>Work</h1>
