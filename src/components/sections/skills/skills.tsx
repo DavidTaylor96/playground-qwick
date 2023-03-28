@@ -1,22 +1,22 @@
-import { component$ } from '@builder.io/qwik';
-import './skills.css';
+import { $, component$, useOn, useOnDocument } from '@builder.io/qwik';
+import './skills.scss';
 
 interface ISkills {
   id: string;
 }
 
 export default component$((props: ISkills) => {
-  const skills = [
-    'UX/UI Design',
-    'Front End Development',
-    'Mobile Development',
-    'Comunication',
-    'Problem Solving',
-    'Leadership',
-    'Collaboration',
-    'Creativity',
-    'Adaptability',
-  ];
+  useOn(
+    'mouseover',
+    $((event) => {
+      // TODO: pause the animation when the mouse is over the sphere
+      const sphere = document.getElementById('sphere')!;
+      if (event.target === sphere) {
+        sphere.classList.add('paused');
+      }
+    })
+  );
+
   return (
     <div class="inner-container" id={props.id}>
       <div class="panel-right">
@@ -30,11 +30,35 @@ export default component$((props: ISkills) => {
         </article>
       </div>
       <div class="panel-left">
-        {skills.map((skill, index) => (
-          <div key={index} class="skill-container">
-            <p>{skill}</p>
+        <div id="sphere">
+          <div class="skill-item">
+            <p>UX/UI Design</p>
           </div>
-        ))}
+          <div class="skill-item">
+            <p>Front End Development</p>
+          </div>
+          <div class="skill-item">
+            <p>Mobile Development</p>
+          </div>
+          <div class="skill-item">
+            <p>Comunication</p>
+          </div>
+          <div class="skill-item">
+            <p>Problem Solving</p>
+          </div>
+          <div class="skill-item">
+            <p>Leadership</p>
+          </div>
+          <div class="skill-item">
+            <p>Collaboration</p>
+          </div>
+          <div class="skill-item">
+            <p>Creativity</p>
+          </div>
+          <div class="skill-item">
+            <p>Adaptability</p>
+          </div>
+        </div>
       </div>
     </div>
   );
