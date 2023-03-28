@@ -1,4 +1,4 @@
-import { $, component$, useOn, useOnDocument } from '@builder.io/qwik';
+import { $, component$, useOnDocument } from '@builder.io/qwik';
 import './skills.scss';
 
 interface ISkills {
@@ -6,13 +6,24 @@ interface ISkills {
 }
 
 export default component$((props: ISkills) => {
-  useOn(
+  useOnDocument(
     'mouseover',
     $((event) => {
       // TODO: pause the animation when the mouse is over the sphere
       const sphere = document.getElementById('sphere')!;
       if (event.target === sphere) {
         sphere.classList.add('paused');
+      }
+    })
+  );
+
+  useOnDocument(
+    'mouseleave',
+    $((event) => {
+      // TODO: resume the animation when the mouse leaves the sphere
+      const sphere = document.getElementById('sphere')!;
+      if (event.target === sphere) {
+        sphere.classList.remove('paused');
       }
     })
   );

@@ -19,8 +19,10 @@ $sphereDiameter: 300px;
   border-radius: 100%;
   transform-style: preserve-3d;
   animation: 5s rotateSphere linear infinite;
+
   div {
     display: block;
+
     &:nth-child(1) {
       transform: rotateY(10deg);
     }
@@ -50,7 +52,7 @@ $sphereDiameter: 300px;
     }
   }
 
-  p{
+  p {
     font-size: 1.5rem;
     display: list-item;
   }
@@ -64,3 +66,23 @@ $sphereDiameter: 300px;
     transform: rotateX(0deg) rotateY(360deg);
   }
 }
+
+.paused {
+  @keyframes rotateSphere {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+  }
+}
+
+// @keyframes rotateSphere {
+//   0% {
+//     transform: rotateX(0deg) rotateY(0deg);
+//   }
+//   100% {
+//     transform: rotateX(0deg) rotateY(360deg);
+//   }
+// }
