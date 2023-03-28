@@ -1,0 +1,39 @@
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  color: #000;
+}
+.skill-container > p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-decoration: wavy;
+  display: list-item; /* This has to be "list-item"                                          */
+  margin-left: 1em;
+}
+
+
+.skill-container:nth-child(1) {
+  transform: translateX(0%) translateY(40%);
+}
+.skill-container:nth-child(2) {
+    transform: translateX(0%) translateY(30%);
+}
+.skill-container:nth-child(3) {
+    transform: translateX(0%) translateY(20%);
+}
+.skill-container:nth-child(4) {
+    transform: translateX(0%) translateY(10%);
+}
+.skill-container:nth-child(5) {
+    transform: translateX(0%) translateY(0%);
+}
+.skill-container:nth-child(6) {
+  transform: translateX(0%) translateY(20%);
+}
+.skill-container:nth-child(7) {
+  transform: translateX(0%) translateY(0%);
+}
+
