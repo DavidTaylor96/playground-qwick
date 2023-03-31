@@ -8,7 +8,9 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  transition: all 0.3s ease-in-out;
 }
+
 
 .scroll-indicator-bar {
   width: 2px;
@@ -17,8 +19,11 @@
   background-color: #fff;
   margin-top: 5px;
   opacity: 0.5;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
 
 .scroll-indicator-bar.active {
   opacity: 1;
+  transform: translateY(-0px);
 }

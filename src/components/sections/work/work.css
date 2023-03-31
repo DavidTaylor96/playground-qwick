@@ -14,8 +14,7 @@ img {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .image-scale {
@@ -24,23 +23,23 @@ img {
 }
 
 .image-container:nth-child(1) {
-  transform: translateX(90%) translateY(50%);
+  transform: translateX(20%) translateY(50%);
 }
 .image-container:nth-child(2) {
-  transform: translateX(-50%) translateY(-10%);
+  transform: translateX(-15%) translateY(-10%);
 }
 .image-container:nth-child(3) {
   transform: translateX(20%) translateY(50%);
 }
 .image-container:nth-child(4) {
-  transform: translateX(-25%) translateY(10%);
+  transform: translateX(-20%) translateY(10%);
 }
 .image-container:nth-child(5) {
-  transform: translateX(50%) translateY(10%);
+  transform: translateX(25%) translateY(10%);
 }
 .image-container:nth-child(6) {
-  transform: translateX(-150%) translateY(20%);
+  transform: translateX(-20%) translateY(20%);
 }
 .image-container:nth-child(7) {
-  transform: translateX(60%) translateY(-20%);
+  transform: translateX(15%) translateY(-55%);
 }

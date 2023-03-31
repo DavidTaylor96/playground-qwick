@@ -29,25 +29,25 @@ export default component$(() => {
       id: 'skills',
     },
   ]);
-  useOnDocument(
-    'scroll',
-    $(() => {
-      const scrollPosition = window.scrollY;
-      const about = document.getElementById('about')!.getBoundingClientRect();
-      const work = document.getElementById('work')!.getBoundingClientRect();
-      const skills = document.getElementById('skills')!.getBoundingClientRect();
 
-      if (scrollPosition >= about.top && scrollPosition <= about.bottom) {
-        router.route = 'about';
-      }
-      if (scrollPosition >= work.top && scrollPosition <= work.bottom) {
-        router.route = 'work';
-      }
-      if (scrollPosition >= skills.top && scrollPosition <= skills.bottom) {
-        router.route = 'skills';
-      }
-    })
-  );
+	useOnDocument('scroll', $(() => {
+		const scrollPosition = window.scrollY + window.innerHeight / 2;
+		const about = document.getElementById('about')!.getBoundingClientRect();
+		const work = document.getElementById('work')!.getBoundingClientRect();
+		const skills = document.getElementById('skills')!.getBoundingClientRect();
+	
+		if (scrollPosition >= about.top && scrollPosition <= about.bottom) {
+			router.route = 'about';
+		}
+		if (scrollPosition >= work.top && scrollPosition <= work.bottom) {
+			router.route = 'work';
+		}
+		if (scrollPosition >= skills.top && scrollPosition <= skills.bottom) {
+			router.route = 'skills';
+		}
+	}));
+
+
   return (
     <>
       <div class="scroll-indicator">
