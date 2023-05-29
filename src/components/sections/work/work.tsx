@@ -1,11 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import KFC from '../../../assets/images/kfc.png';
-import Edinbrugh from '../../../assets/images/edinburghUniversity.png';
-import Medayo from '../../../assets/images/Medayo.png';
-import ScottishEnterprise from '../../../assets/images/scottishEnterPrise.png';
-import Waitrose from '../../../assets/images/waitrose.png';
-import SRUC from '../../../assets/images/sruc.png';
-import Zonal from '../../../assets/images/zonal.png';
+import Exhibition from '../../../assets/images/Art-execution.png';
 import './work.css';
 
 interface IWork {
@@ -17,39 +11,23 @@ export default component$((props: IWork) => {
     <div class="inner-container" id={props.id}>
       <div class="panel-right">
         <article class="right-inner-container">
-          <h1 class="right-panel-header">Work</h1>
+          <h1 class="right-panel-header">Jennifer Taylor</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus totam magni
-            perspiciatis cumque vel repellat deleniti ut, temporibus maxime deserunt. Ipsa nemo
-            ipsum temporibus distinctio quas voluptas animi non.
+            Hi, I'm <strong>Jennifer Taylor</strong>. As an <strong>artist</strong> and{' '}
+            <strong>sculptor</strong> based in the Scottish Highlands, my work is focused on
+            creating <strong>amazing art</strong> that captures the beauty of nature and highland
+            life. My sculptures, deeply influenced by the surrounding landscapes, aim to convey the
+            authenticity and the spirit of this remarkable region.
+          </p>
+          <br />
+          <p>
+            <strong>COME JOIN!,</strong> on Friday 2nd and Saturday 3rd of June at:{' '}
+            <i>St John's church hall, Rothiemurchus, Avimore</i>
           </p>
         </article>
       </div>
       <div class="panel-left">
-        <div class="outer-image-container">
-          <div class="image-container">
-            <img src={KFC} alt="KFC" />
-          </div>
-          <div class="image-container">
-            <img src={Edinbrugh} alt="Edinbrugh" />
-          </div>
-          <div class="image-container">
-            <img src={Medayo} alt="Medayo" class="image-scale" />
-          </div>
-          <div class="image-container">
-            <img src={Waitrose} alt="Waitrose" class="image-scale" />
-          </div>
-          <div class="image-container">
-            <img src={ScottishEnterprise} alt="ScottishEnterprise" />
-          </div>
-
-          <div class="image-container">
-            <img src={SRUC} alt="SRUC" />
-          </div>
-          <div class="image-container">
-            <img src={Zonal} alt="Zonal" />
-          </div>
-        </div>
+        <img class="exhibition-image" src={Exhibition} />
       </div>
     </div>
   );

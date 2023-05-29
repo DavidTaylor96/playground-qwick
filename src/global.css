@@ -69,10 +69,9 @@ h2 {
 
 .panel-right {
   display: flex;
-  flex: 0.7;
+  flex: 1;
   flex-direction: column;
-  color: #fff;
-  background-color: #000;
+  align-items: center;
   scroll-snap-align: start;
   padding-top: 30vh;
 }
@@ -81,6 +80,27 @@ h2 {
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: #fff;
+  align-items: flex-end;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 5vw;
   scroll-snap-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+  .inner-container {
+    flex-direction: column;
+  }
+  .panel-left {
+    order: 0;
+    padding: 0px;
+  }
+  .panel-right {
+    order: 1;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 }

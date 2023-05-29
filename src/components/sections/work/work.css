@@ -1,45 +1,11 @@
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 img {
-  width: auto;
+  max-width: 100%;
   height: auto;
 }
 
-.outer-image-container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.image-scale {
-    width: 30%;
-    height: auto;
-}
-
-.image-container:nth-child(1) {
-  transform: translateX(20%) translateY(50%);
-}
-.image-container:nth-child(2) {
-  transform: translateX(-15%) translateY(-10%);
-}
-.image-container:nth-child(3) {
-  transform: translateX(20%) translateY(50%);
-}
-.image-container:nth-child(4) {
-  transform: translateX(-20%) translateY(10%);
-}
-.image-container:nth-child(5) {
-  transform: translateX(25%) translateY(10%);
-}
-.image-container:nth-child(6) {
-  transform: translateX(-20%) translateY(20%);
-}
-.image-container:nth-child(7) {
-  transform: translateX(15%) translateY(-55%);
+.exhibition-image {
+  width: 100%;
+  height: 100%; /* or a fixed height, like '500px', depending on your needs */
+  object-fit: contain;
+  object-position: center;
 }
