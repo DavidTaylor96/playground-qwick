@@ -64,3 +64,9 @@ The production build will generate client and server modules by running both cli
 yarn build # or `yarn build`
 ```
 # playground-qwick
+
+## Static Site Generator (Node.js)
+
+```
+yarn build.server
+```
