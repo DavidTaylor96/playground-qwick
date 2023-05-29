@@ -1,9 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
+  "name": "Jennifer Taylor Art",
+  "short_name": "J.Taylor Art",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Experience the stunning art of Jennifer Taylor, renowned for her metal sculptures in the Scottish Highlands.",
+  "icons": [
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

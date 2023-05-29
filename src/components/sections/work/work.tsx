@@ -2,13 +2,9 @@ import { component$ } from '@builder.io/qwik';
 import Exhibition from '../../../assets/images/Art-execution.jpg';
 import './work.css';
 
-interface IWork {
-  id: string;
-}
-
-export default component$((props: IWork) => {
+export default component$(() => {
   return (
-    <div class="inner-container" id={props.id}>
+    <div class="inner-container">
       <div class="panel-right">
         <article class="right-inner-container">
           <h1 class="right-panel-header">Jennifer Taylor</h1>
