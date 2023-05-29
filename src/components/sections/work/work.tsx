@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import Exhibition from '../../../assets/images/Art-execution.png';
+import Exhibition from '../../../assets/images/Art-execution.jpg';
 import './work.css';
 
 interface IWork {
