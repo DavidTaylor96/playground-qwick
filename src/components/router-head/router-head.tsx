@@ -14,6 +14,11 @@ export const RouterHead = component$(() => {
 
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfUykemWwCMSYp-Edw5jYzuH9PMJbTdmxfw&usqp=CAU"
+      />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
