@@ -1,11 +1,10 @@
 import { component$ } from '@builder.io/qwik';
-import Exhibition from '../../../assets/images/Art-execution.jpg';
 import './work.css';
 
 export default component$(() => {
   return (
-    <div class="inner-container">
-      <div class="panel-right">
+    <section class="inner-container">
+      <section class="panel-right">
         <article class="right-inner-container">
           <h1 class="right-panel-header">Jennifer Taylor</h1>
           <p>
@@ -22,10 +21,15 @@ export default component$(() => {
             <i>St John's church hall, Rothiemurchus, Avimore</i>
           </p>
         </article>
-      </div>
-      <div class="panel-left">
-        <img class="exhibition-image" src={Exhibition} />
-      </div>
-    </div>
+      </section>
+      <section class="panel-left">
+        <img
+          class="exhibition-image"
+          src="https://storage.googleapis.com/shopify-customerio/tools/image_attachment/image/custom_resized_ac4ca835-bc6f-4264-a460-2ee0d4d76e62.jpg"
+          loading="lazy"
+          alt="image of artist"
+        />
+      </section>
+    </section>
   );
 });
